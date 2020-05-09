@@ -8,7 +8,7 @@ class New extends StatelessWidget {
         children: <Widget>[
           Container(
             child: Stack(children: <Widget>[
-                         Container(
+              Container(
                 height: 250,
                 width: double.infinity,
                 decoration: BoxDecoration(
@@ -101,11 +101,15 @@ class New extends StatelessWidget {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(left: 18, top: 20),
+            margin: EdgeInsets.only(top: 20),
             height: 220,
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: <Widget>[
+                Container(
+                  width: 20,
+                  height: 10,
+                ),
                 Column(
                   children: <Widget>[
                     Container(
@@ -206,11 +210,15 @@ class New extends StatelessWidget {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(left: 18, top: 20),
+            margin: EdgeInsets.only(top: 20),
             height: 220,
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: <Widget>[
+                Container(
+                  width: 20,
+                  height: 10,
+                ),
                 Column(
                   children: <Widget>[
                     Container(

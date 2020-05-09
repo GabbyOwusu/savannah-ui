@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:savannah_ui/screens/details.dart';
 import 'package:savannah_ui/screens/new.dart';
 
 class Home extends StatelessWidget {
@@ -57,12 +58,18 @@ class Home extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 25, left: 25, right: 10),
+              padding: EdgeInsets.only(
+                top: 25,
+              ),
               child: Container(
                 height: 290,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: <Widget>[
+                    Container(
+                      width: 20,
+                      height: 10,
+                    ),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: <Widget>[
@@ -99,8 +106,8 @@ class Home extends StatelessWidget {
                         ),
                         SizedBox(height: 5),
                         Text(
-                          'An experience that cannot\nbe forgotten',
-                          style: TextStyle(fontSize: 20),
+                          'An experience that can never be \nforgotten',
+                          style: TextStyle(fontSize: 15),
                         ),
                       ],
                     ),
@@ -108,22 +115,32 @@ class Home extends StatelessWidget {
                     Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: <Widget>[
-                        Container(
-                          height: 220,
-                          width: 180,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage(
-                                  'images/elephant1.jpg',
-                                ),
-                                fit: BoxFit.fitWidth),
-                            color: Colors.blue,
-                            borderRadius: BorderRadius.all(Radius.circular(15)),
+                        GestureDetector(
+                               onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return Details();
+                              }),
+                            );
+                          },
+                                                  child: Container(
+                            height: 220,
+                            width: 180,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage(
+                                    'images/elephant1.jpg',
+                                  ),
+                                  fit: BoxFit.fitWidth),
+                              color: Colors.blue,
+                              borderRadius: BorderRadius.all(Radius.circular(15)),
+                            ),
                           ),
                         ),
                         SizedBox(height: 15),
                         Text(
-                          'Waterfalls Around',
+                          'Exotic Elephants',
                           style: TextStyle(
                             fontSize: 25,
                             fontWeight: FontWeight.w600,
@@ -131,10 +148,14 @@ class Home extends StatelessWidget {
                         ),
                         SizedBox(height: 5),
                         Text(
-                          'Let the waterfalls show\nyou thier beauty and',
-                          style: TextStyle(fontSize: 20),
+                          'Let the beauty in these exotic creatures',
+                          style: TextStyle(fontSize: 15),
                         ),
                       ],
+                    ),
+                    Container(
+                      width: 20,
+                      height: 10,
                     ),
                   ],
                 ),
@@ -148,11 +169,7 @@ class Home extends StatelessWidget {
         elevation: 0,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.map,
-              color: Colors.grey,
-              size: 25,
-            ),
+            icon: Icon(Icons.map, color: Colors.grey, size: 19),
             title: Text(
               '',
             ),
@@ -161,7 +178,7 @@ class Home extends StatelessWidget {
             icon: Icon(
               Icons.image,
               color: Colors.grey,
-              size: 25,
+              size: 19,
             ),
             title: Text(''),
           ),
@@ -169,7 +186,7 @@ class Home extends StatelessWidget {
             icon: Icon(
               CupertinoIcons.heart,
               color: Colors.grey,
-              size: 25,
+              size: 19,
             ),
             title: Text(''),
           ),
@@ -177,7 +194,7 @@ class Home extends StatelessWidget {
             icon: Icon(
               Icons.calendar_today,
               color: Colors.grey,
-              size: 25,
+              size: 19,
             ),
             title: Text(''),
           ),
