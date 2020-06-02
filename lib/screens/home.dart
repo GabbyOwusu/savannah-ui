@@ -7,26 +7,34 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.white,
+        actions: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: CircleAvatar(
+              backgroundImage: AssetImage('images/user.jpg'),
+              radius: 23,
+            ),
+          ),
+        ],
+      ),
       body: SafeArea(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Padding(
-              padding: EdgeInsets.only(left: 250, top: 20),
-              child: CircleAvatar(
-                backgroundImage: AssetImage('images/user.jpg'),
-                radius: 23,
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(right: 150, top: 30),
+              padding: EdgeInsets.only(top: 10, left: 20),
               child: Text(
                 'Make your next\ntrip a dream',
                 style: TextStyle(
-                  fontSize: 35,
+                  fontSize: 30,
                   fontWeight: FontWeight.w600,
                 ),
               ),
             ),
+            SizedBox(height: 10),
             Padding(
               padding: EdgeInsets.all(
                 20,
@@ -62,14 +70,11 @@ class Home extends StatelessWidget {
                 top: 25,
               ),
               child: Container(
-                height: 290,
+                height: 400,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: <Widget>[
-                    Container(
-                      width: 20,
-                      height: 10,
-                    ),
+                   
                     Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: <Widget>[
@@ -83,8 +88,9 @@ class Home extends StatelessWidget {
                             );
                           },
                           child: Container(
-                            height: 220,
-                            width: 170,
+                            margin: EdgeInsets.only(left: 20),
+                            height: 320,
+                            width: 250,
                             decoration: BoxDecoration(
                               image: DecorationImage(
                                   image: AssetImage(
@@ -100,23 +106,23 @@ class Home extends StatelessWidget {
                         Text(
                           'Unforgettable Safari',
                           style: TextStyle(
-                            fontSize: 25,
+                            fontSize: 20,
                             fontWeight: FontWeight.w600,
                           ),
                         ),
                         SizedBox(height: 5),
                         Text(
                           'An experience that can never be \nforgotten',
-                          style: TextStyle(fontSize: 15),
+                          style: TextStyle(fontSize: 12),
                         ),
                       ],
                     ),
-                    SizedBox(width: 20),
+               
                     Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: <Widget>[
                         GestureDetector(
-                               onTap: () {
+                          onTap: () {
                             Navigator.push(
                               context,
                               MaterialPageRoute(builder: (context) {
@@ -124,9 +130,10 @@ class Home extends StatelessWidget {
                               }),
                             );
                           },
-                                                  child: Container(
-                            height: 220,
-                            width: 180,
+                          child: Container(
+                            margin: EdgeInsets.only(left: 20),
+                           height: 320,
+                            width: 250,
                             decoration: BoxDecoration(
                               image: DecorationImage(
                                   image: AssetImage(
@@ -134,7 +141,8 @@ class Home extends StatelessWidget {
                                   ),
                                   fit: BoxFit.fitWidth),
                               color: Colors.blue,
-                              borderRadius: BorderRadius.all(Radius.circular(15)),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(15)),
                             ),
                           ),
                         ),
@@ -149,7 +157,7 @@ class Home extends StatelessWidget {
                         SizedBox(height: 5),
                         Text(
                           'Let the beauty in these exotic creatures',
-                          style: TextStyle(fontSize: 15),
+                          style: TextStyle(fontSize: 10),
                         ),
                       ],
                     ),

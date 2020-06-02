@@ -56,36 +56,43 @@ class Details extends StatelessWidget {
                       height: 1.5,
                       fontWeight: FontWeight.w600)),
             ),
-            SizedBox(
-              height: 5,
-            ),
-            Container(
-              margin: EdgeInsets.only(top: 420, left: 20),
-              child: Text(
-                  'dataFugiat officia sunt consectetur culpa nulla pariatur nisi. Quis consequat proident cillum' +
-                      'voluptate enim adipisicing magna ea nulla \nex eiusmod elit eiusmod consequat. Ipsum labore cillum nostrud sint eiusmod quis id culpa in voluptate in duis anim.',
-                  style: TextStyle(
-                      color: Colors.white, fontSize: 16, height: 1.5)),
+            // SizedBox(
+            //   height: 20,
+            // ),
+            Positioned(
+              bottom: 150,
+              child: Container(
+                padding: EdgeInsets.only(left: 20, right: 20),
+                child: Text(
+                  'Fugiat officia sunt consectetur culpa nulla pariatur\n nisi. Quis consequat proident cillum' +
+                      'voluptate enim \nadipisicing magna ea nulla ex eiusmod\n elit eiusmod consequat. Ipsum labore cillum \nnostrud sint eiusmod quis id culpa in \nvoluptate in duis anim.',
+                  style:
+                      TextStyle(color: Colors.white, fontSize: 16, height: 1.5),
+                ),
+              ),
             ),
             SizedBox(
               height: 30,
             ),
-            Container(
-              width: 200,
-              height: 40,
-              decoration: BoxDecoration(
-                  color: Colors.blue,
-                  borderRadius: BorderRadiusDirectional.circular(15)),
-              margin: EdgeInsets.only(
-                top: 520,
-                left: 20,
-              ),
-              child: Center(
-                child: Text('Visit',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold)),
+            Positioned(
+              bottom: 30,
+              child: Container(
+                width: 200,
+                height: 40,
+                decoration: BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadiusDirectional.circular(15)),
+                margin: EdgeInsets.only(
+                  top: 520,
+                  left: 20,
+                ),
+                child: Center(
+                  child: Text('Visit',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold)),
+                ),
               ),
             )
           ],

@@ -4,6 +4,20 @@ class New extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: null,
+        elevation: 0,
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
+          iconSize: 20,
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+      ),
       body: ListView(
         children: <Widget>[
           Container(
@@ -19,26 +33,27 @@ class New extends StatelessWidget {
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Padding(
                       padding: EdgeInsets.only(
-                        right: 100,
+                        left: 20,
                         bottom: 10,
                       ),
                       child: Text(
                         'Dreaming Tanzania',
                         style: TextStyle(
-                          fontSize: 40,
+                          fontSize: 25,
                           color: Colors.white,
                         ),
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(right: 120, bottom: 30),
+                      padding: EdgeInsets.only(left: 20, bottom: 30),
                       child: Text(
                         'Four days in contact with the\nnatural wonders of tanzania',
                         style: TextStyle(
-                          fontSize: 24,
+                          fontSize: 18,
                           color: Colors.white,
                         ),
                       ),
@@ -47,24 +62,14 @@ class New extends StatelessWidget {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(left: 20, top: 10),
-                height: 40,
-                width: 40,
-                decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.30),
-                  shape: BoxShape.circle,
-                ),
-                child: IconButton(
-                  icon: Icon(
-                    Icons.arrow_back,
-                    color: Colors.white,
+                  margin: EdgeInsets.only(left: 20, top: 10),
+                  height: 40,
+                  width: 40,
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.30),
+                    shape: BoxShape.circle,
                   ),
-                  iconSize: 20,
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                ),
-              ),
+                  child: null),
               Container(
                 margin: EdgeInsets.only(
                   left: 280,
